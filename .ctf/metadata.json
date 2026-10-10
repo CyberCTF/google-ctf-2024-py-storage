@@ -1,7 +1,7 @@
 {
   "title": "Google CTF 2024: PyStorage",
   "description": "A key-value store written in Python that keeps its data in a text file.",
-  "question": "Retrieve the flag from the challenge service.",
+  "question": "Read the key-value store's secret flag entry without authorization.",
   "category": "MISC",
   "difficulty": 3,
   "evidence_kind": "SECRET"

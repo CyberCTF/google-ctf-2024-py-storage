@@ -1,0 +1,58 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Read the secret entry",
+      "prompt": "Read the store's secret flag entry without being authorized.",
+      "check": {
+        "evidence": "SECRET",
+        "format": "CTF{%s}"
+      },
+      "dev": "CTF{dev-google-ctf-2024-py-storage}",
+      "hints": [
+        "The store writes one line per entry in a text file.",
+        "What does Python consider a newline when it reads text back?"
+      ],
+      "steps": [
+        {
+          "key": "prefix",
+          "title": "Find the protected keys",
+          "prompt": "Which key prefix marks entries you may not read? (with its underscore)",
+          "check": {
+            "answer": [
+              "secret_",
+              "secret"
+            ]
+          }
+        },
+        {
+          "key": "feature",
+          "title": "Name the Python feature",
+          "prompt": "Which Python text-mode feature treats several characters, not only line feed, as line ends?",
+          "check": {
+            "answer": [
+              "universal newlines",
+              "universal newline",
+              "splitlines",
+              "newline translation"
+            ]
+          }
+        },
+        {
+          "key": "class",
+          "title": "Name the bug class",
+          "prompt": "What vulnerability class lets one stored value create an extra record?",
+          "check": {
+            "answer": [
+              "injection",
+              "newline injection",
+              "crlf injection",
+              "record injection",
+              "line injection"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
