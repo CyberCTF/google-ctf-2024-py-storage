@@ -1,8 +1,11 @@
 {
+  "project_name": "cyberlabs-google-ctf-2024-py-storage",
+  "slug": "google-ctf-2024-py-storage",
   "title": "Google CTF 2024: PyStorage",
   "description": "A key-value store written in Python that keeps its data in a text file.",
-  "question": "Read the key-value store's secret flag entry without authorization.",
-  "category": "MISC",
+  "category": "misc",
   "difficulty": 3,
-  "evidence_kind": "SECRET"
+  "evidence_kind": "SECRET",
+  "capabilities": [],
+  "question": "Read the key-value store's secret flag entry without authorization."
 }
